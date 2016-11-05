@@ -14,8 +14,11 @@
       li > button {
         margin-left: 6px;
       }
-      button > span {
+      button > span.good {
         color: green;
+      }
+      button > span.bad {
+        color: red;
       }
     </style>
   </head>
@@ -31,7 +34,7 @@
             <li ng-repeat="item in itemBuyer.items">
               Buy {{ item.quantity }} {{ item.name }}
               <button class="btn btn-default" ng-click="itemBuyer.buyItem($index)">
-                <span class="glyphicon glyphicon-ok"></span> Bought
+                <span class="glyphicon glyphicon-ok good"></span> Buy
               </button>
             </li>
           </ul>
@@ -45,7 +48,7 @@
             <li ng-repeat="item in itemUnbuyer.items">
               Buy {{ item.quantity }} {{ item.name }}
               <button class="btn btn-default" ng-click="itemUnbuyer.unbuyItem($index)">
-                <span class="glyphicon glyphicon-ok"></span> Bought
+                <span class="glyphicon glyphicon-remove bad"></span> Unbuy
               </button>
             </li>
           </ul>
