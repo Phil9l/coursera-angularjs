@@ -46,7 +46,7 @@
           <h2>Already Bought:</h2>
           <ul>
             <li ng-repeat="item in itemUnbuyer.items">
-              Buy {{ item.quantity }} {{ item.name }}
+              Bought {{ item.quantity }} {{ item.name }}
               <button class="btn btn-default" ng-click="itemUnbuyer.unbuyItem($index)">
                 <span class="glyphicon glyphicon-remove bad"></span> Unbuy
               </button>
